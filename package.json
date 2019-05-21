@@ -22,8 +22,8 @@
     "lint-all-fix": "eslint --fix --ext .js ./src ./test ./internals&& tslint --fix -c ./tslint.json './src/**/*.ts'",
     "build": "cross-env NODE_ENV=production gulp library:build",
     "start": "cross-env NODE_ENV=development gulp library:watch:dev",
-    "test": "eslint --ext .js ./test/library && cross-env NODE_ENV=test mocha --require @babel/core/register './test/library/**/*.spec.js'",
-    "test-watch": "eslint --ext .js ./test/library && cross-env NODE_ENV=test mocha --watch ./test --watch-extensions js --require @babel/core/register './test/library/**/*.spec.js'"
+    "test": "eslint --ext .js ./test/library && cross-env NODE_ENV=test mocha --require ./test/babel-register.js './test/library/**/*.spec.js'",
+    "test-watch": "eslint --ext .js ./test/library && cross-env NODE_ENV=test mocha --watch ./test --watch-extensions js,ts --require ./test/babel-register.js './test/library/**/*.spec.js'"
   },
   "license": "MIT",
   "dependencies": {},
@@ -44,7 +44,6 @@
     "eslint-plugin-import": "^2.12.0",
     "gulp": "^4.0.1",
     "gulp-typescript": "^5.0.1",
-    "koa-static": "^3.0.0",
     "mocha": "^5.2.0",
     "rimraf": "^2.5.4",
     "sinon": "^4.3.0",
