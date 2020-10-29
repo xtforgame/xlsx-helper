@@ -1,8 +1,8 @@
 {
-  "name": "az-dev-base",
-  "version": "1.0.0",
-  "description": "A general purpose seed project base",
-  "main": "dist/library/index.js",
+  "name": "xlsx-helper",
+  "version": "0.1.0",
+  "description": "xlsx-helper",
+  "main": "index.js",
   "repository": {
     "type": "git"
   },
@@ -27,7 +27,9 @@
   },
   "license": "MIT",
   "peerDependencies": {},
-  "dependencies": {},
+  "dependencies": {
+    "xlsx": "^0.16.8"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
